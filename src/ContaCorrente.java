@@ -1,3 +1,4 @@
+import javax.swing.*;
 
 public class ContaCorrente extends Conta{
     public ContaCorrente(Cliente cliente) {
@@ -6,7 +7,7 @@ public class ContaCorrente extends Conta{
 
     @Override
     public void imprimirExtrato() {
-        System.out.println(" ---* Extrato conta corrente *---");
+        JOptionPane.showMessageDialog(null, " ---* Extrato conta corrente *---");
         super.imprimirDadosConta();
     }
 }

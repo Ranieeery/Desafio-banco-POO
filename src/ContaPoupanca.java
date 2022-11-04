@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class ContaPoupanca extends Conta {
     public ContaPoupanca(Cliente cliente) {
         super(cliente);
@@ -5,7 +7,7 @@ public class ContaPoupanca extends Conta {
 
     @Override
     public void imprimirExtrato() {
-        System.out.println(" ---* Extrato conta poupança *---");
+        JOptionPane.showMessageDialog(null, " ---* Extrato conta poupança *---");
         super.imprimirDadosConta();
     }
 }

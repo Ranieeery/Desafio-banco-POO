@@ -1,3 +1,5 @@
+import javax.swing.JOptionPane;
+
 public abstract class Conta implements IConta {
     protected int agencia;
     protected String numeroConta;
@@ -37,15 +39,15 @@ public abstract class Conta implements IConta {
         return numeroConta;
     }
 
-    public double getSaldo() {
-        return saldo;
+    public String getSaldo() {
+        return String.valueOf(String.format("%.2f", saldo));
     }
 
     protected void imprimirDadosConta(){
-        System.out.printf("Titular: %s%n" +
+        JOptionPane.showMessageDialog(null,String.format("Titular: %s%n" +
                 "Agência: %d%n" +
                 "Número da conta: %s%n" +
-                "Saldo: %.2f%n", this.cliente.getNomeCliente(), this.agencia, this.numeroConta, this.saldo);
+                "Saldo: %.2f%n", this.cliente.getNomeCliente(), this.agencia, this.numeroConta, this.saldo));
     }
 
     protected String formatConta() {
