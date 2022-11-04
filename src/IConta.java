@@ -1,4 +1,3 @@
-
 public interface IConta {
 
     void sacarDinheiro(double valor);
@@ -6,4 +5,6 @@ public interface IConta {
     void depositarDinheiro(double valor);
 
     void transferirDinheiro(double valor, Conta contaDestino);
+
+    void imprimirExtrato();
 }
