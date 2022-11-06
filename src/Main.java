@@ -106,14 +106,16 @@ class Start extends Banco {
 
         switch (optionOp) {
             case 0:
-                showMessageDialog(null, cp.getSaldo());
+                showMessageDialog(null, "Seu saldo é R$" + cp.getSaldo());
                 break;
             case 1:
-                cp.sacarDinheiro(showInputDialog());
-                showMessageDialog(null, "O novo saldo da conta poupança é: " + cp.getSaldo());
+                double valor = 0;
+                cp.sacarDinheiro(Double.parseDouble(showInputDialog(null, valor)));
+                showMessageDialog(null, "O novo saldo da conta poupança é: R$" + cp.getSaldo());
                 break;
             case 2:
-                cp.depositarDinheiro(new Scanner(System.in).nextDouble());
+                valor = 0;
+                cp.depositarDinheiro(Double.parseDouble(showInputDialog(null, valor)));
                 showMessageDialog(null, "O novo saldo da conta poupança é: " + cp.getSaldo());
                 break;
             case 3:
