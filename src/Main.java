@@ -109,8 +109,8 @@ class Start extends Banco {
                 showMessageDialog(null, "Seu saldo é R$" + cp.getSaldo());
                 break;
             case 1:
-                double valor = 0;
-                cp.sacarDinheiro(Double.parseDouble(showInputDialog(null, valor)));
+                double valor = Double.parseDouble(showInputDialog("Qual o valor do saque?"));
+                cp.sacarDinheiro(valor);
                 showMessageDialog(null, "O novo saldo da conta poupança é: R$" + cp.getSaldo());
                 break;
             case 2:
